@@ -56,7 +56,7 @@ func (mult Mult) Simplify() Expr {
 	case b == Const(1):
 		return a
 	case isConst(a) && isConst(b):
-		return Const(a.(Const) + b.(Const))
+		return Const(a.(Const) * b.(Const))
 	default:
 		return Mult{a, b}
 	}
